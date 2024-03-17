@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+
+@layer base {
+    html {
+        @apply font-base;
+    }
+}
+
+@layer components {
+    .box {
+        @apply max-w-7xl mx-auto px-6;
+    }
+
+    .background-clipper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        clip: rect(auto auto auto auto);
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .background-layer {
+        top: 0;
+        left: 0;
+        height: 108%;
+        width: 100%;
+
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: fixed;
+    }
+
+    .mk-color-layer {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        background-color: rgb(255 0 0 / 25%);
+    }
+}

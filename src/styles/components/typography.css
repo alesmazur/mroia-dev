@@ -1,0 +1,7 @@
+@tailwind base;
+
+@layer base {
+    a {
+        @apply transition-colors duration-300 hover:text-mr-main-active;
+    }
+}
