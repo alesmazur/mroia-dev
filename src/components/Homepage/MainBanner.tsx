@@ -1,11 +1,15 @@
 import { NavLink } from "react-router-dom";
+import { forwardRef } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import ScrolledText from "@/components/Homepage/logic/ScrolledText";
-import ParticlesBox from "@/components/Homepage/logic/ParticlesBox";
+import ScrolledText from "@/utils/ScrolledText";
+import ParticlesBox from "@/utils/ParticlesBox";
 
-function MainBanner() {
+const MainBanner = forwardRef<HTMLDivElement>((_, ref) => {
   return (
-    <div className="bg-mr-main min-h-screen py-20 flex items-center relative">
+    <section
+      className="bg-mr-main min-h-screen py-20 flex items-center relative"
+      ref={ref}
+    >
       <ParticlesBox />
 
       <div className="box w-full relative z-10">
@@ -49,8 +53,8 @@ function MainBanner() {
           </NavLink>
         </div>
       </div>
-    </div>
+    </section>
   );
-}
+});
 
 export default MainBanner;
