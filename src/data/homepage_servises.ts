@@ -6,7 +6,7 @@ import { GiProgression } from "react-icons/gi";
 import { BiSupport } from "react-icons/bi";
 import { IconType } from "react-icons";
 
-interface IServices {
+export interface IServices {
   icon: IconType;
   title: string;
   description: string;

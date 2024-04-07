@@ -8,6 +8,7 @@ const MainBanner = forwardRef<HTMLDivElement>((_, ref) => {
   return (
     <section
       className="bg-mr-main min-h-screen py-20 flex items-center relative"
+      data-element="home-main-banner"
       ref={ref}
     >
       <ParticlesBox />

@@ -11,7 +11,13 @@ import img_project_10 from "@/assets/projects/project-10.webp";
 import img_project_11 from "@/assets/projects/project-11.webp";
 import img_project_12 from "@/assets/projects/project-12.webp";
 
-const projects = [
+interface IProjects {
+  image: string;
+  name: string;
+  url: string;
+}
+
+const projects: IProjects[] = [
   {
     image: img_project_1,
     name: "Project 1",

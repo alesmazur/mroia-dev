@@ -17,8 +17,9 @@ function OurProjects() {
 
   return (
     <section
-      data-element="our-projects-block"
       className="py-20 px-6 relative 4xl:p-1.5"
+      data-element="our-projects"
+      id="projects"
     >
       <h2
         className={clsx(
