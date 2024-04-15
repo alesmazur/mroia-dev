@@ -1,81 +1,91 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { clsx } from "clsx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Link } from "react-scroll";
+
+import BurgerMenu from "@/components/Ui/Header/BurgerMenu";
+
+import clearLinkClass from "@/utils/helper/clearLinkClass";
+import goToByAnchor from "@/utils/helper/goToByAnchor";
 import links from "@/data/header.navigation.json";
 
 function NavigationMobile() {
+  const location = useLocation();
+  const navigate = useNavigate();
   const [show, setShow] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.pageYOffset < 300) clearLinkClass();
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
-      <div
-        data-element="mobile-navigation-burger"
-        onClick={() => setShow(!show)}
-        aria-hidden
-        className="relative z-10 flex flex-col items-center gap-1.5 cursor-pointer"
-      >
-        <span
-          className={clsx(
-            "h-0.5 w-5 bg-white transition-all duration-300 origin-left",
-            show && "rotate-45 -translate-x-px -translate-y-1 bg-violet-900",
-          )}
-        />
-        <span
-          className={clsx(
-            "h-0.5 w-8 bg-white transition-all duration-300 origin-center",
-            show && "-rotate-45 bg-violet-900",
-          )}
-        />
-        <span
-          className={clsx(
-            "h-0.5 w-5 bg-white transition-all duration-300 origin-right",
-            show && "rotate-45 translate-x-[3px] translate-y-1 bg-violet-900",
-          )}
-        />
-      </div>
+      <BurgerMenu show={show} setShow={setShow} />
 
       <nav
         data-element="mobile-navigation"
         className={clsx(
-          "fixed top-0 right-0 bottom-0 left-0 grid text-3xl",
-          show ? "visible" : "invisible",
+          "fixed top-0 right-0 bottom-0 left-0 grid text-3xl min-h-screen",
+          show ? "visible show" : "invisible",
         )}
       >
-        {links.map((item, index) => (
-          <NavLink
-            key={index}
-            to={item.link}
-            onClick={() => setShow(false)}
-            className={({ isActive }) =>
-              clsx(
-                "flex items-center justify-center bg-mr-main border-b border-white/25 tracking-widest ",
-                "transition-all duration-500 hover:bg-mr-main-active hover:text-white",
-                show
-                  ? "odd:translate-x-0 even:translate-x-0"
-                  : "odd:-translate-x-full even:translate-x-full",
-                isActive && "bg-mr-main-active text-white pointer-events-none",
-              )
-            }
-          >
-            {item.text}
-          </NavLink>
-        ))}
+        {/* About us link */}
         <NavLink
-          to="/contact-us"
-          onClick={() => setShow(false)}
+          to={links.aboutUsLink.link}
+          onClick={() => {
+            setShow(false);
+            clearLinkClass();
+          }}
           className={({ isActive }) =>
-            clsx(
-              "flex items-center justify-center bg-mr-main border-b border-white/25 tracking-widest ",
-              "transition-all duration-500 hover:bg-mr-main-active hover:text-white",
-              show
-                ? "odd:translate-x-0 even:translate-x-0"
-                : "odd:-translate-x-full even:translate-x-full",
-              isActive && "bg-mr-main-active text-white pointer-events-none",
-            )
+            clsx("header-mobile-link", isActive && "active")
           }
         >
-          Contact Us
+          {links.aboutUsLink.text}
         </NavLink>
+
+        {/* Anchor links */}
+        {links.anchorLinks.map((item, index) => (
+          <Link
+            key={index}
+            to={item.link}
+            smooth
+            duration={1000}
+            offset={-32}
+            onClick={() => {
+              goToByAnchor(item.link, location, navigate);
+              setShow(false);
+            }}
+            className={clsx("header-mobile-link", `anchor-${item.link}`)}
+          >
+            {item.text}
+          </Link>
+        ))}
+
+        {/* Contact Us anchor link */}
+        <Link
+          to={links.contactAnchorLink.link}
+          smooth
+          duration={1000}
+          offset={-32}
+          onClick={() => {
+            goToByAnchor(links.contactAnchorLink.link, location, navigate);
+            setShow(false);
+          }}
+          className={clsx(
+            "header-mobile-link",
+            `anchor-${links.contactAnchorLink.link}`,
+          )}
+        >
+          {links.contactAnchorLink.text}
+        </Link>
       </nav>
     </>
   );

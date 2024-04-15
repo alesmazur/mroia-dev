@@ -35,23 +35,23 @@ function ParticlesBox() {
         },
         links: {
           color: "#fff",
-          distance: 170,
+          distance: 130,
           enable: true,
           opacity: 0.25,
           width: 1,
         },
         move: {
           enable: true,
-          speed: 2,
+          speed: 1.2,
         },
         number: {
           density: {
             enable: true,
           },
-          value: 200,
+          value: 130,
           limit: {
             mode: "wait",
-            value: 400,
+            value: 250,
           },
         },
         opacity: {

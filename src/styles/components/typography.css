@@ -1,7 +1,53 @@
 @tailwind base;
+@tailwind components;
 
 @layer base {
     a {
         @apply transition-colors duration-300 hover:text-mr-main-active;
+    }
+}
+
+@layer components {
+    .header-desktop-link {
+        @apply relative cursor-pointer before:absolute before:-top-px before:left-0 before:transition-all
+               before:duration-300 before:opacity-0 hover:before:opacity-100 hover:before:-translate-x-4 hover:before:text-mr-main-active
+               after:absolute after:-top-px after:right-0 after:transition-all after:duration-300
+               after:opacity-0 hover:after:opacity-100 hover:after:translate-x-4 hover:after:text-mr-main-active;
+    }
+
+    .header-desktop-link::before {
+        content: '{' !important;
+    }
+
+    .header-desktop-link::after {
+        content: '}' !important;
+    }
+
+    .header-desktop-link.active {
+        @apply text-mr-main-active after:opacity-100 after:translate-x-4 after:text-mr-main-active
+                 before:opacity-100 before:-translate-x-4 before:text-mr-main-active;
+    }
+
+    .contact-us-link-btn {
+        @apply relative text-base pt-1.5 pb-2 px-6 rounded border border-white/25 overflow-hidden cursor-pointer;
+    }
+
+    .contact-us-link-btn.active {
+        @apply text-mr-main-active after:opacity-100 after:translate-x-4 after:text-mr-main-active
+                 before:opacity-100 before:-translate-x-4 before:text-mr-main-active;
+    }
+
+    .header-mobile-link {
+        @apply flex items-center justify-center bg-mr-main border-b border-white/25 tracking-widest
+               transition-all duration-500 hover:bg-mr-main-active hover:text-white
+               odd:-translate-x-full even:translate-x-full cursor-pointer;
+    }
+    
+    .header-mobile-link.active {
+        @apply bg-mr-main-active text-white pointer-events-none;
+    }
+
+    [data-element="mobile-navigation"].show .header-mobile-link {
+        @apply odd:translate-x-0 even:translate-x-0;
     }
 }

@@ -1,18 +1,26 @@
-[
-    {
+{
+    "anchorLinks": [
+        {
+            "link": "services",
+            "text": "Services"
+        },
+        {
+            "link": "projects",
+            "text": "Projects"
+        },
+        {
+            "link": "how-we-work",
+            "text": "How we work"
+        }
+    ],
+
+    "aboutUsLink": {
         "link": "/about",
         "text": "About"
     },
-    {
-        "link": "/services",
-        "text": "Services"
-    },
-    {
-        "link": "/projects",
-        "text": "Projects"
-    },
-    {
-        "link": "/how-we-work",
-        "text": "How we work"
+
+    "contactAnchorLink": {
+        "link": "contact-us",
+        "text": "Contact Us"
     }
-]
+}
