@@ -7,6 +7,7 @@ import {
 import RootLayout from "@/pages/layout/Root";
 import Homepage from "@/pages/Homepage";
 import About from "@/pages/About";
+import Terms from "@/pages/Terms";
 import NotFound from "@/pages/NotFound";
 
 const router = createBrowserRouter(
@@ -14,6 +15,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<Homepage />} />
       <Route path="/about" element={<About />} />
+      <Route path="/terms" element={<Terms />} />
       <Route path="*" element={<NotFound />} />
     </Route>,
   ),

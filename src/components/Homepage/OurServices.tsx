@@ -1,3 +1,5 @@
+import { clsx } from "clsx";
+
 import Title from "@/components/Ui/Title";
 import ServiceItem from "@/components/Ui/Service/ServiceItem";
 import BgClipper from "@/utils/BgClipper";
@@ -8,7 +10,7 @@ import data from "@/data/homepage_servises";
 function OurServices() {
   return (
     <section
-      className="min-h-screen relative py-20 flex items-center justify-center"
+      className="min-h-[600px] relative py-20 flex items-center justify-center 2xl:min-h-screen"
       data-element="our-services"
       id="services"
     >
@@ -16,7 +18,12 @@ function OurServices() {
         <div className="box">
           <Title>Our servises</Title>
 
-          <div className="grid gap-6 2xl:grid-cols-2 5xl:grid-cols-3">
+          <div
+            className={clsx(
+              "flex items-stretch gap-6 overflow-x-scroll snap-x snap-mandatory pb-5",
+              "2xl:grid 2xl:grid-cols-2 5xl:grid-cols-3 2xl:pb-0 2xl:overflow-x-auto",
+            )}
+          >
             {data.map((service, index) => (
               <ServiceItem key={index} {...service} />
             ))}

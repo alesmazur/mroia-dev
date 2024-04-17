@@ -1,0 +1,42 @@
+[
+    {
+        "title": "Introduction",
+        "text": "Welcome to Mroia.com (the \"Website\"). By using our Website, you agree to comply with these Terms of Service (\"Terms\") and our Privacy Policy."
+    },
+    {
+        "title": "Information Collection",
+        "text": "We collect personal information such as name, email address, and contact details when voluntarily provided by users. We may also collect usage data and cookies to improve our services and user experience."
+    },
+    {
+        "title": "Use of Information",
+        "text": "We use collected information for purposes such as providing and improving our services, communicating with users, and complying with legal obligations."
+    },
+    {
+        "title": "Disclosure of Information",
+        "text": "We may share information with third-party service providers to assist in operating our Website and providing services. We may also disclose information in response to legal requests or to protect our rights."
+    },
+    {
+        "title": "Data Security",
+        "text": "We take reasonable measures to safeguard user information but cannot guarantee absolute security."
+    },
+    {
+        "title": "User Rights",
+        "text": "Users may opt out of receiving promotional communications and have choices regarding cookies through browser settings."
+    },
+    {
+        "title": "Limitation of Liability",
+        "text": "We are not liable for any damages resulting from the use of our Website or services."
+    },
+    {
+        "title": "Modifications",
+        "text": "We reserve the right to update these Terms and our Privacy Policy. Users are responsible for reviewing changes periodically."
+    },
+    {
+        "title": "Governing Law",
+        "text": "These Terms and our Privacy Policy shall be governed by the laws of [Jurisdiction]."
+    },
+    {
+        "title": "Contact Us",
+        "text": "If you have any questions or concerns about these Terms or our Privacy Policy, please contact us at [contact email]."
+    }
+]

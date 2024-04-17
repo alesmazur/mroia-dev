@@ -13,28 +13,23 @@ function Footer() {
 
         <div className="hidden 2xl:flex gap-2.5">
           <NavLink
-            to="/privacy-policy"
-            className={({ isActive }) =>
-              clsx(isActive && "text-mr-main-active")
-            }
-          >
-            Privacy Policy
-          </NavLink>
-          <span>|</span>
-          <NavLink
             to="/terms"
             className={({ isActive }) =>
               clsx(isActive && "text-mr-main-active")
             }
           >
-            Terms & Conditions
+            Privacy Policy <span className="px-2">|</span> Terms of Service
           </NavLink>
         </div>
 
         <div className="flex gap-2.5">
-          <Link to="https://www.linkedin.com/">LinkedIn</Link>
+          <Link to="https://www.linkedin.com/company/mroia/" target="_blank">
+            LinkedIn
+          </Link>
           <span>|</span>
-          <Link to="https://www.facebook.com/">FaceBook</Link>
+          <Link to="https://www.facebook.com/MROIA.Poland/" target="_blank">
+            FaceBook
+          </Link>
         </div>
       </div>
     </footer>
