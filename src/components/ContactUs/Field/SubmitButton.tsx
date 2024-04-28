@@ -27,10 +27,11 @@ function SubmitButton({
     <button
       type="submit"
       className={clsx(
-        "mt-6 p-2.5 rounded-xl !bg-mr-main-active text-mr-main text-lg font-medium",
+        "mt-6 p-2.5 rounded-xl  text-mr-main text-lg font-medium",
         "transition-opacity duration-300 hover:opacity-85",
         loading && "opacity-85 pointer-events-none",
         success && "!bg-green-500 text-white !pointer-events-none",
+        !success && "!bg-mr-main-active",
       )}
     >
       {content}
