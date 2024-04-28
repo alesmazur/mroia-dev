@@ -1,0 +1,16 @@
+[
+    {
+        "label": "Email",
+        "value": "hello@mroia.com",
+        "link": "mailto:hello@mroia.com"
+    },
+    {
+        "label": "Phone",
+        "value": "+48 791 508 474",
+        "link": "tel:+48 791 508 474"
+    },
+    {
+        "label": "Address",
+        "value": "15-879 ul. Stoleczna 4/2a/2 , Bialystok, Poland"
+    }
+]

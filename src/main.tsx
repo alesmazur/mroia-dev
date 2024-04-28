@@ -6,6 +6,7 @@ import router from "@/router";
 import "@/styles/main.css";
 import "@/styles/components/layout.css";
 import "@/styles/components/typography.css";
+import "@/styles/components/slick.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <HelmetProvider>
