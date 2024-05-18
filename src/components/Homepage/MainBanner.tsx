@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import ScrolledText from "@/utils/ScrolledText";
 import ParticlesBox from "@/utils/ParticlesBox";
+import LearnMoreLink from "@/utils/LearnMoreLink";
 
 function MainBanner() {
   return (
@@ -13,11 +13,11 @@ function MainBanner() {
       <ParticlesBox />
 
       <div className="box w-full relative z-10">
-        <div className="max-w-3xl ">
-          <h1 className="font-heading text-6xl mb-12">
+        <div className="max-w-3xl">
+          <h1 className="font-heading mb-12 text-4xl md:text-6xl">
             <div className="flex">
               We
-              <div className="text-mr-main-active w-64 h-[70px] relative ml-4 block overflow-hidden">
+              <div className="text-mr-main-active w-64 h-11 relative ml-4 block overflow-hidden md:h-[70px]">
                 <ScrolledText />
               </div>
             </div>
@@ -37,19 +37,9 @@ function MainBanner() {
 
           <NavLink
             to="/about"
-            className="text-2xl inline-flex items-center mt-14 tracking-widest relative 
-                      text-mr-main-active group transition-transform duration-500
-                      hover:translate-x-7"
+            className="text-2xl text-mr-main-active mt-14 inline-block"
           >
-            <IoIosArrowForward
-              className="absolute top-[5px] -left-[30px] opacity-0 group-hover:opacity-100
-                        transition-opacity duration-500 animate-[pulse-left_1s_linear_infinite]"
-            />
-            Learn more
-            <IoIosArrowBack
-              className="absolute top-[5px] -right-7 opacity-0 group-hover:opacity-100
-                        transition-opacity duration-500 animate-[pulse-right_1s_linear_infinite]"
-            />
+            <LearnMoreLink />
           </NavLink>
         </div>
       </div>

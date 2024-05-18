@@ -4,14 +4,25 @@ import { clsx } from "clsx";
 function ScrolledText() {
   const [position, setPosition] = useState<number>(0);
   const [showClass, setShowClass] = useState<boolean>(true);
+  const [screenSize, setScreenSize] = useState<number>(window.innerWidth);
 
   useEffect(() => {
+    window.addEventListener("resize", () => {
+      setScreenSize(window.innerWidth);
+      setPosition(0);
+    });
+
     const interval = setInterval(() => {
       setShowClass(true);
-      if (position === 0) setPosition(-74);
-      if (position === -74) setPosition(-150);
-      if (position === -150) {
-        setPosition(-226);
+
+      const pos1 = screenSize <= 448 ? -55 : -74;
+      const pos2 = screenSize <= 448 ? -111 : -150;
+      const pos3 = screenSize <= 448 ? -167 : -226;
+
+      if (position === 0) setPosition(pos1);
+      if (position === pos1) setPosition(pos2);
+      if (position === pos2) {
+        setPosition(pos3);
 
         const timeout = setTimeout(() => {
           setShowClass(false);

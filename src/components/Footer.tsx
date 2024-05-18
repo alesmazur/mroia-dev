@@ -13,12 +13,12 @@ function Footer() {
 
         <div className="hidden 2xl:flex gap-2.5">
           <NavLink
-            to="/terms"
+            to="/privacy"
             className={({ isActive }) =>
               clsx(isActive && "text-mr-main-active")
             }
           >
-            Privacy Policy <span className="px-2">|</span> Terms of Service
+            Privacy Policy
           </NavLink>
         </div>
 
