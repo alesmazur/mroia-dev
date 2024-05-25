@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Cookie from "@/components/Cookie";
 
 function RootLayout() {
   return (
@@ -10,6 +11,7 @@ function RootLayout() {
         <Outlet />
       </main>
       <Footer />
+      <Cookie />
     </>
   );
 }

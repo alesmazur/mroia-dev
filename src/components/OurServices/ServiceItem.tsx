@@ -11,8 +11,7 @@ function ServiceItem({ icon: Icon, title, description }: ServiceItemProps) {
   return (
     <div
       className={clsx(
-        "flex items-center flex-col py-6 px-3 snap-center min-w-[calc(100vw_-_48px)]",
-        "2xl:min-w-0 3xl:px-6 3xl:py-8",
+        "flex items-center flex-col py-6 px-3 h-full 3xl:px-6 3xl:py-8",
         "bg-white/25 rounded-xl border-2 border-white text-center",
         "transition-colors duration-300 hover:bg-mr-main-active/20 hover:border-mr-main-active/80",
       )}

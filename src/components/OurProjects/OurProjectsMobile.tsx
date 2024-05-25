@@ -1,10 +1,32 @@
 import { clsx } from "clsx";
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
+import type { Swiper as SwiperType } from "swiper/types";
 import LearnMoreLink from "@/utils/LearnMoreLink";
 import data from "@/data/homepage_projects";
 
 function OurProjectsMobile() {
+  const [slider, setSlider] = useState<SwiperType | null>(null);
+
+  function autoPlay() {
+    if (slider) {
+      const length = slider.slides.length - 1;
+      const current = slider.activeIndex;
+
+      if (current === length) {
+        slider.slideTo(0, 1200, false);
+      } else {
+        slider.slideTo(current + 1, 1200, false);
+      }
+    }
+  }
+
+  useEffect(() => {
+    const interval = setInterval(() => autoPlay(), 6000);
+    return () => clearInterval(interval);
+  }, [slider]);
+
   return (
     <section
       className="grid overflow-hidden"
@@ -12,12 +34,13 @@ function OurProjectsMobile() {
       id="projects"
     >
       <Swiper
-        speed={800}
+        speed={1200}
         slidesPerView={1}
         pagination={{
           clickable: true,
         }}
         modules={[Pagination]}
+        onSwiper={(swiper: SwiperType) => setSlider(swiper)}
         className="w-screen"
       >
         {data.reverse().map((project, index) => (

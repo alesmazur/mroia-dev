@@ -7,7 +7,7 @@ interface IStepItem extends IWorkStep {
 function StepItem({ id, title, text, image }: IStepItem) {
   return (
     <div
-      className="overflow-hidden grid rounded-2xl border-2 border-white/50 bg-mr-main/80
+      className="overflow-hidden grid rounded-2xl border-2 border-white/50 bg-mr-main/80 h-full
                  transition-colors duration-300 hover:bg-mr-main/90 hover:border-mr-main-active/80
                  3xl:grid-cols-[2fr_1fr]"
     >

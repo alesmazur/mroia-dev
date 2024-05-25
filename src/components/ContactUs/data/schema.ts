@@ -25,9 +25,9 @@ const FormSchema = yup.object().shape({
       "Phone number should start from plus",
       (value) => (value && value.length > 0 ? /^[+]/.test(value) : true),
     )
-    .matches(/^[\d+]+$/, "Letters aren’t acceptable")
+    .matches(/^[+\d\s()-]+$/, "Letters aren’t acceptable")
     .min(8, "Number cannot be less than 7 digits")
-    .max(12, "Number cannot be more than 11 digits"),
+    .max(20, "Number cannot be more than 20 digits"),
 
   message: yup
     .string()

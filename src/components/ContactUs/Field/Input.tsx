@@ -26,7 +26,7 @@ function Input(props: IInputProps) {
         id={inputName}
         className={clsx(
           "bg-transparent border-b border-white/25 py-1.5 outline-none text-xl w-full",
-          "placeholder:italic",
+          "placeholder:text-lg placeholder:font-light placeholder:tracking-wider",
           errors[inputName]?.message && "!border-red-500/75",
         )}
         placeholder={placeholder || ""}

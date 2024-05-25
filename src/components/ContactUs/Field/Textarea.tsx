@@ -13,12 +13,13 @@ interface ITextareaProps {
   inputName: "name" | "email" | "phone" | "message";
   inputLabel: string;
   rows: number;
+  placeholder?: string;
   register: UseFormRegister<IFormData>;
   errors: FieldErrors<IFormData>;
 }
 
 function Textarea(props: ITextareaProps) {
-  const { inputName, inputLabel, rows, register, errors } = props;
+  const { inputName, inputLabel, rows, register, errors, placeholder } = props;
 
   return (
     <div className="grid gap-2 relative group">
@@ -28,7 +29,9 @@ function Textarea(props: ITextareaProps) {
         className={clsx(
           "bg-transparent border-b border-white/25 py-1.5 outline-none text-xl w-full",
           errors[inputName]?.message && "!border-red-500/75",
+          "placeholder:text-lg placeholder:font-light placeholder:tracking-wider",
         )}
+        placeholder={placeholder || ""}
         {...register(inputName)}
       />
       <label

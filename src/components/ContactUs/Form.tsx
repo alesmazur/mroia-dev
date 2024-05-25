@@ -97,7 +97,8 @@ function ContactUsForm() {
 
         <Input
           inputName="email"
-          inputLabel="Email"
+          inputLabel="E-mail"
+          placeholder="email@example.com"
           register={register}
           errors={errors}
         />
@@ -105,6 +106,7 @@ function ContactUsForm() {
         <Input
           inputName="phone"
           inputLabel="Phone"
+          placeholder="+1 (153) 457-5777"
           register={register}
           errors={errors}
         />
@@ -112,6 +114,7 @@ function ContactUsForm() {
         <Textarea
           inputName="message"
           inputLabel="Your message"
+          placeholder="Hi, I would like to order a website from you."
           rows={4}
           register={register}
           errors={errors}
