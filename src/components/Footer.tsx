@@ -6,8 +6,8 @@ function Footer() {
     <footer className="mt-auto py-5 text-sm bg-mr-footer">
       <div className="box flex items-center justify-between">
         <div className="flex gap-2.5">
-          <span>© {new Date().getFullYear()}</span>
-          <span>|</span>
+          <span className="hidden sm:block">© {new Date().getFullYear()}</span>
+          <span className="hidden sm:block">|</span>
           <span>Mroia.com</span>
         </div>
 
