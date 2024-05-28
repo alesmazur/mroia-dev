@@ -50,6 +50,9 @@ function OurProjectsMobile() {
                 <img
                   src={project.image}
                   alt={project.name}
+                  width={400}
+                  height={400}
+                  loading="lazy"
                   className="w-full max-w-xl mx-auto"
                 />
               </div>

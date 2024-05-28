@@ -42,7 +42,13 @@ function OurProjectsDesktop() {
                 project.bgColor,
               )}
             >
-              <img src={project.image} alt={project.name} />
+              <img
+                src={project.image}
+                alt={project.name}
+                width={700}
+                height={700}
+                loading="lazy"
+              />
             </div>
           </SwiperSlide>
         ))}

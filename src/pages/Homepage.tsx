@@ -1,9 +1,11 @@
+import { lazy, Suspense } from "react";
 import { Helmet } from "react-helmet-async";
 import MainBanner from "@/components/Homepage/MainBanner";
-import OurServices from "@/components/Homepage/OurServices";
-import OurProjects from "@/components/Homepage/OurProjects";
-import WorkStep from "@/components/Homepage/WorkStep";
-import ContactUs from "@/components/Homepage/ContactUs";
+
+const OurServices = lazy(() => import("@/components/Homepage/OurServices"));
+const OurProjects = lazy(() => import("@/components/Homepage/OurProjects"));
+const WorkStep = lazy(() => import("@/components/Homepage/WorkStep"));
+const ContactUs = lazy(() => import("@/components/Homepage/ContactUs"));
 
 function Homepage() {
   return (
@@ -18,10 +20,12 @@ function Homepage() {
       </Helmet>
 
       <MainBanner />
-      <OurServices />
-      <OurProjects />
-      <WorkStep />
-      <ContactUs />
+      <Suspense>
+        <OurServices />
+        <OurProjects />
+        <WorkStep />
+        <ContactUs />
+      </Suspense>
     </>
   );
 }

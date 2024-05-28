@@ -37,6 +37,9 @@ function StepItem({ id, title, text, image }: IStepItem) {
         <img
           src={image}
           alt={title}
+          width={500}
+          height={500}
+          loading="lazy"
           className="w-full h-full object-cover 
                    3xl:[clip-path:polygon(40%_0%,100%_0%,100%_100%,0%_100%)] "
         />
