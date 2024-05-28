@@ -49,6 +49,7 @@ function NavigationDesktop() {
             smooth
             duration={1000}
             offset={-32}
+            href={`#${item.link}`}
             onClick={() => goToByAnchor(item.link, location, navigate)}
             className={clsx("header-desktop-link", `anchor-${item.link}`)}
           >

@@ -11,6 +11,7 @@ interface IProjects {
   description: string;
   technologies: string[];
   link: string;
+  seoText: string;
 }
 
 const projects: IProjects[] = [
@@ -29,6 +30,7 @@ const projects: IProjects[] = [
       "Magento 2",
     ],
     link: "https://www.annahariri.com/",
+    seoText: "Clothing store Anna Hariri",
   },
   {
     image: imgProject4,
@@ -45,6 +47,7 @@ const projects: IProjects[] = [
       "Magento 2",
     ],
     link: "https://www.actionsales.com/en/",
+    seoText: "Food service equipment and supplies",
   },
 
   {
@@ -62,6 +65,7 @@ const projects: IProjects[] = [
       "Magento 2",
     ],
     link: "https://www.neverfail.com.au/",
+    seoText: "Clean water store in Australia",
   },
   {
     image: imgProject2,
@@ -78,6 +82,7 @@ const projects: IProjects[] = [
       "Magento 2",
     ],
     link: "https://www.platypusshoes.com.au/",
+    seoText: "Store selling quality branded shoes",
   },
   {
     image: imgProject1,
@@ -94,6 +99,7 @@ const projects: IProjects[] = [
       "Magento 2",
     ],
     link: "https://meissnersewing.com/",
+    seoText: "Store selling sewing accessories",
   },
 ];
 

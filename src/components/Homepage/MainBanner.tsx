@@ -36,10 +36,10 @@ function MainBanner() {
           </p>
 
           <NavLink
-            to="/about"
+            to="/about-us"
             className="text-2xl text-mr-main-active mt-14 inline-block"
           >
-            <LearnMoreLink />
+            <LearnMoreLink seoText="Learn more about our company" />
           </NavLink>
         </div>
       </div>

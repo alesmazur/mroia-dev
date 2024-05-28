@@ -59,6 +59,7 @@ function NavigationMobile() {
             smooth
             duration={1000}
             offset={-32}
+            href={`#${item.link}`}
             onClick={() => {
               goToByAnchor(item.link, location, navigate);
               setShow(false);
@@ -75,6 +76,7 @@ function NavigationMobile() {
           smooth
           duration={1000}
           offset={-32}
+          href={`#${links.contactAnchorLink.link}`}
           onClick={() => {
             goToByAnchor(links.contactAnchorLink.link, location, navigate);
             setShow(false);

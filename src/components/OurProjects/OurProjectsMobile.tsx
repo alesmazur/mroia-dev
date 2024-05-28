@@ -104,7 +104,7 @@ function OurProjectsMobile() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <LearnMoreLink />
+                    <LearnMoreLink seoText={project.seoText} />
                   </a>
                 </div>
               </div>

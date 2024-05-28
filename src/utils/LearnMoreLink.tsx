@@ -1,7 +1,11 @@
 import { clsx } from "clsx";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
-function LearnMoreLink() {
+interface LearnMoreLinkProps {
+  seoText: string;
+}
+
+function LearnMoreLink({ seoText }: LearnMoreLinkProps) {
   return (
     <span
       className={clsx(
@@ -16,6 +20,7 @@ function LearnMoreLink() {
         )}
       />
       Learn more
+      <span className="sr-only">{seoText}</span>
       <IoIosArrowBack
         className={clsx(
           "absolute top-[5px] -right-7 opacity-0 group-hover:opacity-100",

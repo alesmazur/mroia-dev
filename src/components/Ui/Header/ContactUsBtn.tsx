@@ -14,6 +14,7 @@ function ContactUsBtn() {
       smooth
       duration={1000}
       offset={-32}
+      href={`#${links.contactAnchorLink.link}`}
       onClick={() =>
         goToByAnchor(links.contactAnchorLink.link, location, navigate)
       }
