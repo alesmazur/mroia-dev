@@ -96,7 +96,7 @@ const projects: IProjects[] = [
     bgColor: "bg-teal-300",
     name: "Platypus shoes",
     description:
-      "MROIA developed the Platypus Shoes e-commerce platform using Magento 2, ensuring a robust and scalable online presence. The project involved customizing the platform to support a vast range of footwear products and brands, integrating features like advanced search, personalized recommendations, and streamlined checkout processes. The implementation included essential technologies such as PHP, MySQL, and Elasticsearch to enhance performance and user experience. The result is a dynamic and user-friendly website that caters to diverse customer needs and preferences.",
+      "MROIA built Platypus Shoes' e-commerce platform on Magento 2, ensuring robustness and scalability online. Customizations supported a wide range of footwear products and brands, integrating advanced search, personalized recommendations, and streamlined checkout processes. Essential technologies like PHP, MySQL, and Elasticsearch were utilized to enhance performance and user experience. The outcome is a dynamic, user-friendly website meeting diverse customer needs.",
     technologies: [
       "Magento 2",
       "PHP",
@@ -121,7 +121,7 @@ const projects: IProjects[] = [
     bgColor: "bg-blue-100",
     name: "Meissner Sewing",
     description:
-      "MROIA developed the e-commerce platform for Meissner Sewing using Magento 2, ensuring a robust and scalable online presence. The project involved customizing the platform to support a wide range of sewing and quilting products, integrating essential features such as live personal shopping, virtual lessons, and an extensive product catalog​ (Meissner Sewing and Vacuum)​​ (Meissner Sewing and Vacuum)​. Advanced functionalities like wish lists, comprehensive product categories, and seamless checkout processes were also implemented to enhance user experience and drive sales​ (PDF FlipBook)​​ (Meissner Sewing and Vacuum)​. The result is a dynamic and user-friendly website that caters to both hobbyists and professionals in the sewing community​ (Meissner Sewing and Vacuum)​.",
+      "MROIA developed Meissner Sewing's e-commerce platform on Magento 2, ensuring robustness and scalability online. Customizations supported various sewing and quilting products, integrating features like live shopping and virtual lessons, alongside an extensive product catalog. Advanced functions such as wish lists, detailed product categories, and smooth checkout processes were added to enhance user experience and boost sales. The outcome is a dynamic, user-friendly website serving both sewing enthusiasts and professionals.",
     technologies: [
       "Magento 2",
       "PHP",

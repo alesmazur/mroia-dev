@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { clsx } from "clsx";
 import { IoIosClose } from "react-icons/io";
 import { useEffect, useState } from "react";
@@ -6,23 +6,27 @@ import Cookies from "js-cookie";
 
 function Cookie() {
   const cookieName: string = "mroia-cookie-agreement";
-  const [hideCookie, setHideCookie] = useState(false);
-  const [isCookieConfirm, setIsCookieConfirm] = useState(false);
+  const [isCookieConfirm, setIsCookieConfirm] = useState("no-checked");
+  const location = useLocation();
 
   useEffect(() => {
-    if (Cookies.get(cookieName)) setIsCookieConfirm(true);
-  }, []);
+    if (Cookies.get(cookieName)) {
+      setIsCookieConfirm("checked-true");
+    } else {
+      setIsCookieConfirm("checked-false");
+    }
+  }, [location]);
 
   return (
     <div
       data-element="cookies"
       className={clsx(
-        "fixed bottom-0 right-0 left-0 z-50 opacity-0 invisible",
+        "fixed bottom-0 right-0 left-0 z-50 transition-opacity duration-500",
         "py-6 bg-mr-main/85 text-sm leading-6 tracking-wide text-white",
         "border-t border-white 3xl:text-base 3xl:pr-4",
-        hideCookie && "hidden",
-        isCookieConfirm && "hidden",
-        !isCookieConfirm && "!opacity-100 !visible",
+        isCookieConfirm === "no-checked" && "opacity-0 invisible",
+        isCookieConfirm === "checked-true" && "opacity-0 invisible",
+        isCookieConfirm === "checked-false" && "opacity-100 visible",
       )}
     >
       <div className="box grid gap-8 3xl:grid-cols-[1fr_160px] 3xl:items-center">
@@ -49,7 +53,7 @@ function Cookie() {
           )}
           onClick={() => {
             Cookies.set(cookieName, "true", { expires: 30 });
-            setIsCookieConfirm(true);
+            setIsCookieConfirm("checked-true");
           }}
         >
           Agreed
@@ -60,7 +64,7 @@ function Cookie() {
             "absolute top-0 right-0 cursor-pointer text-4xl",
             "transition-colors duration-300 hover:text-mr-main-active",
           )}
-          onClick={() => setHideCookie(true)}
+          onClick={() => setIsCookieConfirm("checked-true")}
         />
       </div>
     </div>

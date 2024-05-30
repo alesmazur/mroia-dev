@@ -28,7 +28,7 @@ function OurProjectsDesktop() {
         speed={800}
         modules={[Controller]}
         controller={{ control: leftSlider }}
-        className="h-screen w-full"
+        className="min-h-[900px] h-screen w-full"
         onSlideChange={(swiper: SwiperType) =>
           changeSlides(swiper, rightSlider as SwiperType)
         }
@@ -38,7 +38,7 @@ function OurProjectsDesktop() {
           <SwiperSlide key={index}>
             <div
               className={clsx(
-                "min-h-screen grid items-center justify-center",
+                "h-full grid items-center justify-center",
                 project.bgColor,
               )}
             >
@@ -62,7 +62,7 @@ function OurProjectsDesktop() {
         speed={800}
         modules={[Pagination, Controller]}
         controller={{ control: rightSlider }}
-        className="h-screen w-full"
+        className="min-h-[900px] h-screen w-full"
         onSlideChange={(swiper: SwiperType) =>
           changeSlides(swiper, leftSlider as SwiperType)
         }
@@ -77,7 +77,7 @@ function OurProjectsDesktop() {
       >
         {data.reverse().map((project, index) => (
           <SwiperSlide key={index}>
-            <div className="grid pl-10 py-16 pr-14 min-h-screen">
+            <div className="grid pl-10 py-16 pr-14 h-full">
               <div className="flex flex-col">
                 <h2
                   className={clsx(
