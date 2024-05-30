@@ -20,10 +20,10 @@ function About() {
   return (
     <>
       <Helmet>
-        <title>About us page title, need min 65 symbols</title>
+        <title>Mroia | Why us? Learn more about Mroia.</title>
         <meta
           name="description"
-          content="About us page description, need 70-155 symbols"
+          content="Learn more about Mroia, your trusted partner in Magento 2, WordPress, and e-commerce development, design, and marketing. Discover our commitment to enhancing your online presence with innovative solutions and seamless integrations."
         />
         <link rel="canonical" href="https://dev-mroia.netlify.app/about-us" />
       </Helmet>

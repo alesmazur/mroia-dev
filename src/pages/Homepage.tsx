@@ -11,10 +11,12 @@ function Homepage() {
   return (
     <>
       <Helmet>
-        <title>Main page title, need min 65 symbols</title>
+        <title>
+          Mroia | Finest e-commerce software development company from Europe
+        </title>
         <meta
           name="description"
-          content="Main page description, need 70-155 symbols"
+          content="We are providing high-class digital services and software development for customers businesses all around the world. We specialized in  software development, web design  and digital marketing."
         />
         <link rel="canonical" href="https://dev-mroia.netlify.app/" />
       </Helmet>

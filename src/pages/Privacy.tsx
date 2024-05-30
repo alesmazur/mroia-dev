@@ -16,10 +16,10 @@ function Privacy() {
   return (
     <>
       <Helmet>
-        <title>Privacy page title, need min 65 symbols</title>
+        <title>Mroia | Privacy Policy</title>
         <meta
           name="description"
-          content="Privacy page description, need 70-155 symbols"
+          content="Read the Privacy Policy of Mroia to understand how we collect, use, and protect your personal information. Your privacy is our priority in all Magento 2, WordPress, and e-commerce services."
         />
         <link rel="canonical" href="https://dev-mroia.netlify.app/privacy" />
       </Helmet>
@@ -45,10 +45,10 @@ function Privacy() {
             GDPR, we inform you that:
           </p>
 
-          <p>
+          <div>
             1. The controller of your personal data is Aliaksandr
             Znak-Mazurkevich
-            <div className="grid mt-3 ml-5">
+            <p className="grid mt-3 ml-5">
               <span className="flex gap-8">
                 tel.{" "}
                 <a
@@ -67,16 +67,16 @@ function Privacy() {
                   hello@mroia.com
                 </a>
               </span>
-            </div>
-          </p>
+            </p>
+          </div>
 
-          <p>
+          <div>
             2. The provided personal data are processed for the purpose of:
-            <div className="mt-3 indent-4">
+            <p className="mt-3 indent-4">
               - creating and working with digital technologies in web fulfilling
               the legally binding obligations of the Controller (Article 6(1)(c)
               of the GDPR):
-            </div>
+            </p>
             <ul className="mt-4 ml-0.5 pl-4 list-[upper-alpha] [&_li]:pl-1.5">
               <li>handling and processing complaints regarding the service;</li>
               <li>
@@ -99,7 +99,7 @@ function Privacy() {
                 Aliaksandr Znak-Mazurkevich;
               </li>
             </ul>
-          </p>
+          </div>
 
           <div>
             3. Your personal data will be processed for the period necessary to
