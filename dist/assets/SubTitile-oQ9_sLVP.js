@@ -1,0 +1,1 @@
+import{j as e,c as r}from"./index-CqB831tZ.js";function a({children:x,className:t}){return e.jsx("p",{className:r("text-center text-lg mx-auto max-w-4xl leading-8 mb-16",t&&`${t}`),children:x})}export{a as S};

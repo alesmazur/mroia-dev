@@ -1,0 +1,5 @@
+# Allow all web crawlers full access to the website
+User-agent: *
+
+# Sitemap location
+Sitemap: https://dev-mroia.netlify.app/sitemap.txt
