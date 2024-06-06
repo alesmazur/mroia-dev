@@ -1,0 +1,3 @@
+https://dev-mroia.netlify.app/
+https://dev-mroia.netlify.app/about-us
+https://dev-mroia.netlify.app/privacy
