@@ -2,6 +2,7 @@
   "name": "mroia.com",
   "private": true,
   "version": "1.0.0",
+  "homepage": "http://alesmazur.github.io/mroia-dev",
   "type": "module",
   "scripts": {
     "dev": "vite",
